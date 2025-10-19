@@ -107,6 +107,7 @@
         <div></div>
         <div></div>
         <div></div>
+        <button class="close-preloader">&times;</button>
     </div>
     <!--End Preloader-->
 
@@ -251,8 +252,7 @@
 
                                             <div class="content-box">
                                                 <h3>Our Address</h3>
-                                                <p>Old Barrier, Kasoa,
-                                                    Central Region, Ghana</p>
+                                                <p>Kasoa, Central Region, Ghana</p>
                                             </div>
                                         </div>
                                     </div>
@@ -304,7 +304,7 @@
                             <div class="title-box">
                                 <h2>Get In Touch</h2>
                             </div>
-                            <form class="contact-page__form-box" action="https://formspree.io/f/xzzvwevg" method="POST">
+                            <form class="contact-page__form-box" id="contact-form">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                         <div class="input-box">
@@ -337,7 +337,9 @@
                                             <div class="icon style2"><span class="fa fa-pencil"></span></div>
                                         </div>
                                     </div>
-
+                                    <!-- Google reCaptcha -->
+                                    <div class="g-recaptcha" data-sitekey="6LdI3u4rAAAAAK20-HnQKoxQPWq3aN8GdzktjYO5">
+                                    </div>
                                     <div class="col-xl-12">
                                         <div class="contact-page__form-btn">
                                             <button type="submit" class="thm-btn">
@@ -363,13 +365,8 @@
 
         <!--Start Google Map One-->
         <section class="google-map-one">
-            <!-- <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6209.242755903148!2d-77.04363602434464!3d38.90977276948481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1394992895496"
-                class="google-map-one__map">
-            </iframe> -->
-
             <iframe class="google-map-one__map"
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63539.23253265895!2d-0.4349358298783383!3d5.5370266594932245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sOld%20Barrier%2C%20Kasoa%2C%20Central%20Region%2C%20Ghana!5e0!3m2!1sen!2sde!4v1741049516703!5m2!1sen!2sde"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.174123763376!2d-0.4319952239004879!3d5.541178894439098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdfbb7adc17b2c9%3A0xd9920241d2bbd7e6!2sEzy%20Roofs%20Consult!5e0!3m2!1sen!2sgh!4v1760824688217!5m2!1sen!2sgh"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
         <!--End Google Map One-->
@@ -589,17 +586,18 @@
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/typed-2.0.11.js"></script>
 
-
     <script src="assets/js/gsap/gsap.js"></script>
     <script src="assets/js/gsap/ScrollTrigger.js"></script>
     <script src="assets/js/gsap/SplitText.js"></script>
 
-
     <!-- template js -->
     <script src="assets/js/script.js"></script>
+
+    <!-- Google reCapcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Email Js Template -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
-
-
-<!-- Mirrored from unicktheme.com/2025/reroof/main-html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Apr 2025 18:48:33 GMT -->
 
 </html>

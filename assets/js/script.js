@@ -82,9 +82,14 @@
   }
 
   // Preloader
-  $(window).on("load", function (event) {
-    $(".js-preloader").delay(700).fadeOut(500);
+  $(".close-preloader").on("click", function (e) {
+    e.preventDefault();
+    $(".js-preloader").fadeOut(500);
   });
+
+  setTimeout(function() {
+    $(".js-preloader").fadeOut(500);
+  }, 3000);
 
   // AOS Animation
   if ($("[data-aos]").length) {

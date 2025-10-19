@@ -2002,7 +2002,22 @@ img.clickMe {
   height: 40px;
 }
 
-
+.close-preloader {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 31, 31);
+}
 
 /*--------------------------------------------------------------
 # End
