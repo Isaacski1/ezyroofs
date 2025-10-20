@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | Ezy Roofs</title>
+    <style>
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #e50914, #ff6767);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .container {
+            max-width: 600px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .logo img {
+            width: 160px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 7rem;
+            font-weight: 800;
+            line-height: 1;
+            color: #fff;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* ===== BUTTON ===== */
+        a.home-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #fff;
+            color: #e50914;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        a.home-btn:hover {
+            background-color: #e50914;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* ===== ANIMATION ===== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 5rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="https://www.ezyroofs.com/assets/img/header-logo.png" alt="Ezy Roofs Logo">
+        </div>
+        <h1>404</h1>
+        <h2>Oops! Page Not Found</h2>
+        <p>Looks like the page you’re trying to reach doesn’t exist or has been moved.<br>Let’s get you back to safety.
+        </p>
+        <a href="index.html" class="home-btn">Go Back Home</a>
+    </div>
+
+</body>
+
+</html>
