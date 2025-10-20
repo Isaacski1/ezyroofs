@@ -42,29 +42,31 @@
     const dropdownMenu = document.querySelector(".dropdown-menu");
     const hiddenInput = document.querySelector("#selected-location");
 
-    dropdownToggle.addEventListener("click", function (event) {
-      event.preventDefault();
-      dropdownMenu.style.display =
-        dropdownMenu.style.display === "block" ? "none" : "block";
-    });
+    if (dropdownToggle && dropdownMenu && hiddenInput) {
+      dropdownToggle.addEventListener("click", function (event) {
+        event.preventDefault();
+        dropdownMenu.style.display =
+          dropdownMenu.style.display === "block" ? "none" : "block";
+      });
 
-    dropdownMenu.addEventListener("click", function (event) {
-      if (event.target.tagName === "LI") {
-        const selectedValue = event.target.textContent.trim();
-        dropdownToggle.textContent = selectedValue; // Update the button text
-        hiddenInput.value = selectedValue; // Update the hidden input value
-        dropdownMenu.style.display = "none";
-      }
-    });
+      dropdownMenu.addEventListener("click", function (event) {
+        if (event.target.tagName === "LI") {
+          const selectedValue = event.target.textContent.trim();
+          dropdownToggle.textContent = selectedValue; // Update the button text
+          hiddenInput.value = selectedValue; // Update the hidden input value
+          dropdownMenu.style.display = "none";
+        }
+      });
 
-    document.addEventListener("click", function (event) {
-      if (
-        !dropdownToggle.contains(event.target) &&
-        !dropdownMenu.contains(event.target)
-      ) {
-        dropdownMenu.style.display = "none";
-      }
-    });
+      document.addEventListener("click", function (event) {
+        if (
+          !dropdownToggle.contains(event.target) &&
+          !dropdownMenu.contains(event.target)
+        ) {
+          dropdownMenu.style.display = "none";
+        }
+      });
+    }
   });
 
   /*--------------------------------------------------------------

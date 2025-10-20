@@ -270,7 +270,7 @@
         <div class="title-box">
           <h2>Request A Free Estimate</h2>
         </div>
-        <form class="form">
+        <form class="form" id="appointment-form">
           <div class="form-group">
             <input type="text" name="Full Name" placeholder="Your Name" required="">
           </div>
@@ -1435,6 +1435,63 @@
 
   <!-- Email Js Template -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Include EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    // Appointment Form
+    (function () {
+      emailjs.init("D_juqj1YHFPFqnfYM");
+    })();
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("appointment-form");
+      const btn = form.querySelector("button[type='submit']");
+      const originalText = btn.innerHTML;
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Change button text while sending
+        btn.disabled = true;
+        btn.innerHTML = "Sending...";
+
+        // Collect form data
+        const formData = {
+          to_name: "Ezy Roofs Team",
+          from_name: form.querySelector("input[name='Full Name']").value,
+          from_email: form.querySelector("input[name='Email']").value,
+          from_location: form.querySelector("input[name='Location']").value,
+          appointment_date: form.querySelector("input[name='Date']").value,
+          subject:
+            form.querySelector("input[name='Subject']").value ||
+            "Requesting For Estimate",
+        };
+
+        // Send email via EmailJS
+        emailjs
+          .send("service_delzyne", "template_5ysaxin", formData)
+          .then(function (response) {
+            // Show a short success animation/message
+            btn.style.backgroundColor = "#28a745";
+            btn.innerHTML = "✅ Sent Successfully!";
+            setTimeout(() => {
+              window.location.href = "contact-submited-success.html";
+            }, 2000); // 2-second delay before redirect
+          })
+          .catch(function (error) {
+            alert("❌ Failed to send appointment request. Please try again.");
+            console.error("EmailJS Error:", error);
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            btn.style.backgroundColor = "";
+          });
+      });
+    });
+  </script>
+
+
 </body>
 
 </html>
